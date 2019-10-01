@@ -1,0 +1,102 @@
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<title>Helpmotional</title>
+<style>
+	body{font-family: sans-serif;}
+#cabecalho {
+	background-color: #FFBA0B;
+	color: white; 
+	height: 70px;
+	width: 2019px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	box-shadow: 0px 2PX 30px #C691C1;
+	padding-left: 30px;
+}
+.mapa{position: absolute;
+	top:150px;
+left: 700px;}
+#legenda{position: absolute;
+top: 80px;
+left: 700px;}
+
+.lateral{position: absolute;
+	height: 350px;
+	border-style: solid;
+	border-width: 5px;
+	border-color: #AFAFAF;
+	border-radius: 20px; 
+	left: 15px;
+	top: 100px;
+
+
+}
+
+.botao { width: 200px;
+			display: inline-block;
+			margin: 1.5em;
+			border: 0;
+			padding: 0.5em 1em;
+			text-decoration: none;
+			color: #ffffff;
+			background: #FFBA0B;
+			border-radius: 100px;
+			box-shadow: 3px 3px 0 3px #FFBA0B;
+			transition: box-shadow 0.3s ease, transform 0.3s ease;}
+
+	.botao:active {
+			box-shadow: 0 0 0 0 #,
+						inset 4px 4px 4px #930;
+			transform: translate(6px, 6px);
+		}
+
+		#quero{position: absolute;
+                top: 35px; }
+		#preciso{
+                position: absolute;
+                top: 130px; 
+               
+		}
+		#materiais{
+                position: absolute;
+                top: 190px; 
+                width: 200px;}
+       #ir{padding-left: 20px;
+       	color:black;}
+       aside{font-family: sans-serif;}
+</style>
+</head>
+<body>
+	<main>
+	<header id="cabecalho">
+		<nav>
+		<h1 id="titulo"> Encontrar psicólogo </h1>
+	</nav>
+
+	<aside class="lateral"> <h1 id="ir"> Ir para </h1>
+	
+
+	<a href="preciso.html" class="botao" id="preciso">
+		Preciso de ajuda
+	</a>
+
+	<a href="materiais.html" class="botao" id="materiais">
+		Materiais
+	</a>
+
+	<a href="quero.html" class="botao" id="psico">
+		Quero ajudar
+	</a>
+	</aside>
+
+
+	
+
+
+	</header>
+	<h2 id="legenda"> Clínicas na sua região </h2>
+	<iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127020.60413701535!2d-35.29228474941788!3d-5.799914645968561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b3aaac26460531%3A0x5d8b404cf00fed69!2sNatal%2C+RN!5e0!3m2!1spt-BR!2sbr!4v1545917243915" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+</body>
+</html>
