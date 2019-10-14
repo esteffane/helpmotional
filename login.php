@@ -2,7 +2,7 @@
 $login = $_POST['login'];
 $entrar = $_POST['entrar'];
 $senha = md5($_POST['senha']);
-$conexao = mysqli_connect('127.0.0.1','root','');
+$conexao = mysqli_connect('localhost','root','vazio');
 $dbname = mysql_select_db('cadastro');
   if (isset($entrar)) {
            
