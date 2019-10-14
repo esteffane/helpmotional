@@ -3,7 +3,7 @@ $login = $_POST['login'];
 $entrar = $_POST['entrar'];
 $senha = md5($_POST['senha']);
 $conexao = mysqli_connect('127.0.0.1','root','');
-$db = mysql_select_db('cadastro');
+$dbname = mysql_select_db('cadastro');
   if (isset($entrar)) {
            
     $verifica = mysql_query("SELECT * FROM usuario WHERE login = 
