@@ -2,10 +2,10 @@
  
 $login = $_POST['login'];
 $senha = MD5($_POST['senha']);
-$connect = mysql_connect('nome_do_servidor','nome_de_usuario','senha');
-$db = mysql_select_db('nome_do_banco_de_dados');
+$conexao = mysql_connect('nome_do_servidor','nome_de_usuario','senha');
+$db = mysql_select_db('cadastro');
 $query_select = "SELECT login FROM usuarios WHERE login = '$login'";
-$select = mysql_query($query_select,$connect);
+$select = mysql_query($query_select,$conexao);
 $array = mysql_fetch_array($select);
 $logarray = $array['login'];
  
@@ -24,7 +24,7 @@ $logarray = $array['login'];
  
       }else{
         $query = "INSERT INTO usuarios (login,senha) VALUES ('$login','$senha')";
-        $insert = mysql_query($query,$connect);
+        $insert = mysql_query($query,$conexao);
          
         if($insert){
           echo"<script language='javascript' type='text/javascript'>
