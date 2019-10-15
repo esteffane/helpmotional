@@ -1,4 +1,7 @@
 <?php 
+
+include "conexao.php";
+
 $login = $_POST['login'];
 $entrar = $_POST['entrar'];
 $senha = md5($_POST['senha']);
@@ -18,3 +21,4 @@ $dbname = mysql_select_db('cadastro');
       }
   }
 ?>
+
