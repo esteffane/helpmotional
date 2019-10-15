@@ -1,8 +1,17 @@
 <?php
 	$servidor = "localhost:3307";
 	$usuario = "root";
-	$password = "labinfo";
+	$password = "";
 	$dbname = "cadastro";
 
-	$conexao = mysqli_connect($servidor, $usuario, $senha, $dbname)or die ('Não foi possível conectar');
+	$conexao = mysqli_connect($servidor, $usuario, $password, $dbname);
+
+if (mysqli_connect($servidor, $usuario, $password, $dbname)) {
+    //echo "Conexão estabelicida";
+}
+else{
+	echo "Não foi possível conectar ao banco de dados";
+}
+
 ?>
+
