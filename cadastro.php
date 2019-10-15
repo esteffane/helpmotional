@@ -2,7 +2,7 @@
  
 $login = $_POST['login'];
 $senha = MD5($_POST['senha']);
-$conexao = mysqli_connect ('localhost','root','vazio');
+$conexao = mysqli_connect ('localhost:3307','root','');
 $dbname = mysql_select_db('cadastro');
 $query_select = "SELECT login FROM usuarios WHERE login = '$login'";
 $select = mysql_query($query_select,$conexao);
