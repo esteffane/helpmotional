@@ -1,40 +1,21 @@
 <?php 
+include 'conexao.php';
+
+
+if(isset($_POST['cadastrar'])):
+  $login = mysqli_escape_string($conexao,$_POST['login']);
+  $senha = mysqli_escape_string($conexao,MD5($_POST['senha']));
+
+$sql = "INSERT INTO usuario (login,senha) VALUES ('$login', '$senha')";
+
+ if(mysqli_query($conexao, $sql)):
+  header("Location: login.html?sucesso");
  
-$login = $_POST['login'];
-$senha = MD5($_POST['senha']);
-$conexao = mysqli_connect ('localhost:3307','root','');
-$dbname = mysql_select_db('cadastro');
-$query_select = "SELECT login FROM usuarios WHERE login = '$login'";
-$select = mysql_query($query_select,$conexao);
-$array = mysql_fetch_array($select);
-$logarray = $array['login'];
- 
-  if($login == "" || $login == null){
-    echo"<script language='javascript' type='text/javascript'>
-    alert('O campo login deve ser preenchido');window.location.href='
-    cadastro.html';</script>";
- 
-    }else{
-      if($logarray == $login){
- 
-        echo"<script language='javascript' type='text/javascript'>
-        alert('Esse login já existe');window.location.href='
-        cadastro.html';</script>";
-        die();
- 
-      }else{
-        $query = "INSERT INTO usuarios (login,senha) VALUES ('$login','$senha')";
-        $insert = mysql_query($query,$conexao);
-         
-        if($insert){
-          echo"<script language='javascript' type='text/javascript'>
-          alert('Usuário cadastrado com sucesso!');window.location.
-          href='login.html'</script>";
-        }else{
-          echo"<script language='javascript' type='text/javascript'>
-          alert('Não foi possível cadastrar esse usuário');window.location
-          .href='cadastro.html'</script>";
-        }
-      }
-    }
+ else:
+    header("Location: cadastro.php");
+endif;
+
+endif;
+
 ?>
+
