@@ -1,7 +1,7 @@
 <?php
 	$servidor = "localhost";
 	$usuario = "root";
-	$senha = "vazio";
+	$senha = "";
 	$dbname = "cadastro";
 
 	$conexao = mysqli_connect($servidor, $usuario, $senha, $dbname)or die ('Não foi possível conectar');
