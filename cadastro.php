@@ -9,7 +9,7 @@ if(isset($_POST['cadastrar'])):
 $sql = "INSERT INTO usuario (login,senha) VALUES ('$login', '$senha')";
 
  if(mysqli_query($conexao, $sql)):
-  header("Location: login.html?sucesso");
+  header("Location: login2.html?sucesso");
  
  else:
     header("Location: cadastro.php");
